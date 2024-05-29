@@ -1,0 +1,239 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	scroll-padding-top: 2rem;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background: #ecf0f3;
+}
+
+.wrapper,
+.wrapper .img-area,
+.social-icons a,
+.buttons button {
+	box-shadow: -3px -3px 7px #ffffff,
+		3px 3px 5px #ceced1;
+	background: #ecf0f3;
+	border-radius: 10px;
+}
+.text-under{
+	font-size: 11px;
+    display: block;
+	text-align: center;
+}
+.num-count{
+	text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 19px;
+}
+.wrapper {
+	position: relative;
+	padding: 30px;
+	width: 350px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.wrapper .img-area {
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+}
+
+.inner-area img {
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.wrapper .name {
+	font-size: 23px;
+	font-weight: 500;
+	color: #31344b;
+	margin: 10px 0 5px 0;
+}
+
+.wrapper .about {
+	font-weight: 400;
+	color: #3d3d3d;
+	font-size:17px;
+}
+
+.wrapper .social-icons {
+	margin: 15px 0 25px 0;
+}
+
+.social-icons a {
+	height: 40px;
+	width: 40px;
+	display: inline-flex;
+	text-decoration: none;
+	margin: 0 5px;
+	border-radius: 50%;
+	position: relative;
+	transition: 0.5s;
+}
+.social-icons a:hover{
+	transform: translate(0 , 10px);
+}
+.social-icons a::before,
+.buttons button::before {
+	content: "";
+	transition: .4s;
+}
+
+.buttons button:hover::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	box-shadow: inset -3px -3px 7px #ffffff,
+		inset 3px 3px 5px #ceced1;
+	background: #ecf0f3;
+}
+
+.buttons button:hover::before {
+	border-radius: 5px;
+	z-index: -1;
+}
+
+.social-icons a i {
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	line-height: 40px;
+	z-index: 5;
+	transition: 0.5s;
+}
+
+.social-icons a.fb i {
+	color: #4267B2;
+}
+
+.social-icons a.twitter i {
+	color: #1DA1F2;
+}
+
+.social-icons a.insta i {
+	color: #E1306C;
+}
+
+.social-icons a.yt i {
+	color: #ff0000;
+}
+
+.wrapper .buttons {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.buttons button {
+	position: relative;
+	width: 100%;
+	border: none;
+	outline: none;
+	padding: 12px 0;
+	font-size: 17px;
+	font-weight:400;
+ border-radius: 10px;
+	cursor: pointer;
+	color: #31344b;
+	z-index: 4;
+}
+
+.buttons button:first-child {
+	margin-right: 10px;
+}
+
+.buttons button:last-child {
+	margin-right: 10px;
+}
+
+.wrapper .social-share {
+	display: flex;
+	width: 100%;
+	margin-top: 30px;
+	padding: 0 5px;
+	justify-content: space-between;
+}
+
+.social-share .row {
+	color: #31344b;
+	font-size: 17px;
+	cursor: pointer;
+	position: relative;
+}
+
+.social-share .row::before {
+	position: absolute;
+	content: "";
+	width: 2px;
+	height: 100%;
+	background: #e0e6eb;
+	margin-left: -25px;
+}
+
+.row:first-child::before {
+	background: none;
+}
+
+.social-share .row i.icon-2 {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: traslateY(-50%);
+	opacity: 0;
+	pointer-event: none;
+	transition: all 0.3s ease;
+}
+
+.row:nth-child(1):hover i.icon-2,
+.row:nth-child(2):hover i.icon-2 {
+	opacity: 1;
+	pointer-event: auto;
+}
+
+.wrapper .icon {
+	height: 35px;
+	width: 35px;
+	line-height: 35px;
+	color: #31344b;
+	opacity: 0.7;
+	cursor: pointer;
+	position: absolute;
+	top: 15px;
+	text-align: center;
+}
+
+.wrapper .icon.arrow {
+	left: 15px;
+}
+
+.wrapper .icon.dots {
+	right: 15px;
+}
+
+.wrapper .icon i {
+	position: relative;
+	transition: .5s;
+	z-index: 5;
+}
